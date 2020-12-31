@@ -1,36 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
-  <HeroList :heroes="heroes" @add-hero="updateHeroes" />
+  <AppHeader />
+  <div class="w-full flex">
+    <div class="m-auto">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import HeroList from "./components/HeroList.vue";
+import AppHeader from "./components/AppHeader.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    HeroList
+    AppHeader
   },
   data() {
-    return {
-      heroes: [
-        { id: 1, name: "Bruce Wayne" },
-        { id: 2, name: "Victor Stone" },
-        { id: 3, name: "Diana" },
-        { id: 4, name: "Lois Lane" }
-      ]
-    };
+    return {};
   },
-  methods: {
-    updateHeroes(hero) {
-      this.heroes = [
-        ...this.heroes,
-        { id: this.heroes.length + 1, name: hero }
-      ];
-    }
-  }
+  methods: {}
 };
 </script>
