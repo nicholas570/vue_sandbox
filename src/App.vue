@@ -1,9 +1,7 @@
 <template>
   <AppHeader />
   <div class="w-full flex">
-    <div class="m-auto">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 

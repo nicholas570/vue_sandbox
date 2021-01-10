@@ -1,22 +1,24 @@
 <template>
-  <h1 class="text-2xl text-center">{{ heroesCount }}</h1>
-  <ul>
-    <li class="flex justify-between" v-for="hero in heroes" :key="hero.id">
-      <div>
-        {{ hero.name }}
-      </div>
-      <button @click="removeHero(hero.id)">X</button>
-    </li>
-  </ul>
-  <form class="mt-10" @submit.prevent="addHero">
-    <input class="border rounded" type="text" v-model.trim.lazy="newHero" />
-    <button
-      class="border rounded bg-gradient-to-r from-red-700 to-pink-500 text-white"
-      type="submit"
-    >
-      Add hero
-    </button>
-  </form>
+  <div class="m-auto">
+    <h1 class="text-2xl text-center">{{ heroesCount }}</h1>
+    <ul>
+      <li class="flex justify-between" v-for="hero in heroes" :key="hero.id">
+        <div>
+          {{ hero.name }}
+        </div>
+        <button @click="removeHero(hero.id)">X</button>
+      </li>
+    </ul>
+    <form class="mt-10" @submit.prevent="addHero">
+      <input class="border rounded" type="text" v-model.trim.lazy="newHero" />
+      <button
+        class="border rounded bg-gradient-to-r from-red-700 to-pink-500 text-white"
+        type="submit"
+      >
+        Add hero
+      </button>
+    </form>
+  </div>
 </template>
 
 <script>
